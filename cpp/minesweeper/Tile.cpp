@@ -1,3 +1,0 @@
-Tile() {
-	hasMine = false;
-}
