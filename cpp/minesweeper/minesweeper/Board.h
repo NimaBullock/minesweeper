@@ -5,15 +5,20 @@
 
 class Board {
 protected:
-	std::vector<int*> mineLoc;
+	std::vector<Tile> boardLayout;
+	std::vector<Tile> mineLoc;
 	int boardSize;
 
 public:
 	Board();
+	~Board();
 
 	void printBoard();
-	Board generateBoard(int row, int column, float mineChance);
+	void generateBoard(int row, int column, float mineChance);
+	int revealTile(Tile revealed);
+	void incrementNeighbors(int rowsize, Tile NewMine);
 
+	Tile at(int index) { return boardLayout.at(index); }
 	void setSize(int size) { boardSize = size; }
 	int size() { return boardSize; }
 };

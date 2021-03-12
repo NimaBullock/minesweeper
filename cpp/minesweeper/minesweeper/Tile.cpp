@@ -1,6 +1,10 @@
 #include "Tile.h"
 
 Tile::Tile() {
+	locationx = -1;
+	locationy = -1;
+	revealed = false;
+	mineCount = 0;
 	hasMine = false;
 	leftEdge = false;
 	rightEdge = false;
@@ -16,19 +20,4 @@ void Tile::setLocation(int x, int y) {
 std::vector<int> Tile::getLocation() {
 	std::vector<int> location = { locationx, locationy };
 	return location;
-}
-
-void Tile::placeMineHere(int row, int column, std::vector<Tile> board) {
-	hasMine = true;
-	this->incrementNeighbors(row, column, board);
-}
-
-void Tile::incrementNeighbors(int row, int column, std::vector<Tile> board) {
-	std::vector<int> tileCoord = this->getLocation();
-
-	// ensure the row above exists before trying to increment the mines there.
-	if (!(this->topEdge)) {
-
-	}
-
 }

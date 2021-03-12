@@ -2,6 +2,6 @@
 
 class RandGen{
 public:
-	int RandInt();
-	float RandFloat();
+	static int RandInt();
+	static float RandFloat();
 };

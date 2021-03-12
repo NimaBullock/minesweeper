@@ -3,13 +3,16 @@
 #include <vector>
 
 class Tile {
+private:
+	int locationx;
+	int locationy;
+	bool revealed;
+
 public:
 	Tile();
 
 	bool hasMine;
 	bool leftEdge, rightEdge, topEdge, bottomEdge;
-	int locationx;
-	int locationy;
 	int mineCount;
 
 	void incrementCount() { mineCount++; }
@@ -19,8 +22,6 @@ public:
 	void isLeftEdge() { leftEdge = 1; }
 
 	void setLocation(int x, int y);
-	void placeMineHere(int row, int column, std::vector<Tile> board);
-	void incrementNeighbors(int row, int column, std::vector<Tile> board);
 	std::vector<int> getLocation();
 	std::vector<Tile> neighbors;
 };

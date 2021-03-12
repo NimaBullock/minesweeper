@@ -141,7 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="minesweeper.cpp" />
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="RandGen.cpp" />
     <ClCompile Include="Tile.cpp" />
   </ItemGroup>
   <ItemGroup>
